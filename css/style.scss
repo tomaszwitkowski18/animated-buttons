@@ -143,3 +143,33 @@ body {
         transform: translateX(-50px) rotate(-45deg);
     }
 }
+
+.button--doubleborder {
+    margin-bottom: 200px;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 80%;
+        height: 3px;
+        bottom: -15px;
+        right: -12px;
+        background: #000;
+        transition: .3s;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        height: 80%;
+        width: 3px;
+        bottom: -15px;
+        right: -15px;
+        background: #000;
+        transition: .3s;
+    }
+    &:hover::before {
+        width: 90%;
+    }
+    &:hover::after {
+        height: 100%;
+    }
+}
